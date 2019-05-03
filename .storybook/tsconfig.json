@@ -1,14 +1,14 @@
 {
-  "extends": "../projects/lib/tsconfig.lib.json",
+  "extends": "../lib/tsconfig.lib.json",
   "compilerOptions": {
     "types": [
       "node"
     ]
   },
   "exclude": [
-    "../projects/lib/**/*.spec.ts"
+    "../lib/**/*.spec.ts"
   ],
   "include": [
-    "../projects/lib/**/*"
+    "../lib/**/*"
   ]
 }
