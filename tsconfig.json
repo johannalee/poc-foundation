@@ -20,10 +20,10 @@
     ],
     "paths": {
       "lib": [
-        "dist/lib"
+        "@lib"
       ],
       "lib/*": [
-        "dist/lib/*"
+        "@lib/*"
       ]
     }
   }
