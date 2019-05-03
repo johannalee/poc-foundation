@@ -17,11 +17,9 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "@angular-builders/jest:run",
           "options": {
-            "main": "projects/lib/test.ts",
-            "tsConfig": "projects/lib/tsconfig.spec.json",
-            "karmaConfig": "projects/lib/karma.conf.js"
+            "runInBand": true
           }
         },
         "lint": {
