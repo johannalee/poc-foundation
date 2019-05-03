@@ -1,7 +1,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": ".",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -19,6 +19,6 @@
       "es2018",
       "dom"
     ],
-    "paths": { "@lib/*": ["projects/lib/*"] }
+    "paths": { "@lib/*": ["lib/*"] }
   }
 }
