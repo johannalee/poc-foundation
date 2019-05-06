@@ -10,6 +10,7 @@
     "npm:pack": "cd dist/lib && npm pack",
     "package": "npm run build:lib && npm run npm:pack",
     "storybook": "start-storybook -p 6006",
+    "test:gen-output": "ng test --json --outputFile=test-results.json --watch",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
