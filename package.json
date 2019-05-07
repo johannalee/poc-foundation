@@ -12,6 +12,7 @@
     "storybook": "start-storybook -p 6006",
     "test:gen-output": "ng test --json --outputFile=test-results.json --watch",
     "test": "export NODE_ENV=test&& ng test",
+    "test:update-snapshot": "export NODE_ENV=test&& ng test --updateSnapshot",
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
