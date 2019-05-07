@@ -13,6 +13,7 @@
     "test:gen-output": "ng test --json --outputFile=test-results.json --watch",
     "e2e": "ng e2e",
     "test": "export NODE_ENV=test&& ng test",
+    "test:update-snapshot": "export NODE_ENV=test&& ng test --updateSnapshot",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "format": "prettier --config .prettierrc --list-different \"./lib/**/*.{ts,js,scss}\"",
@@ -20,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "ng test && npm run format"
+      "pre-commit": "export NODE_ENV=test&& ng test && npm run format"
     }
   },
   "private": true,
