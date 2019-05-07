@@ -3,6 +3,7 @@ module.exports = {
     "@babel/preset-env"
   ],
   "plugins": [
-    "babel-plugin-require-context-hook"
+    "macros",
+    "require-context-hook"
   ]
 }
