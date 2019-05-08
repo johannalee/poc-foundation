@@ -1,6 +1,12 @@
 {
   "name": "poc-foundation",
   "version": "0.0.0",
+  "lint-staged": {
+    "./lib/**/*.{ts,js,scss}": [
+      "prettier --config .prettierrc --list-different",
+      "git add"
+    ]
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -12,7 +18,9 @@
     "storybook": "start-storybook -p 6006",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "format": "prettier --config .prettierrc --list-different \"./lib/**/*.{ts,js,scss}\"",
+    "format:fix": "prettier --config .prettierrc --write \"./lib/**/*.{ts,js,scss}\""
   },
   "private": true,
   "dependencies": {
@@ -49,6 +57,7 @@
     "jest": "^24.7.1",
     "jest-preset-angular": "^7.1.0",
     "ng-packagr": "^4.2.0",
+    "prettier": "^1.17.0",
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tsickle": ">=0.34.0",
