@@ -1,0 +1,51 @@
+@import "../utils.scss";
+@import "../variables/direction.scss";
+
+@mixin generateSpaceRule($type, $space, $direction) {
+  #{$type}-#{$direction}: #{$space};
+}
+
+@mixin generateSpaceClass($class, $type, $spaceValue, $directionValue) {
+  #{$class} {
+    @include generateSpaceRule($type, $spaceValue, $directionValue)
+  }
+}
+
+@function generateSpaceClassName($prefix, $space, $direction) {
+  @if($direction == 'a') {
+    @return ".#{$prefix}-#{$space}";
+  } @else {
+    @return ".#{$prefix}-#{$direction}-#{$space}";
+  }
+}
+
+@function generateSpaceCssRuleName($type, $directionValue) {
+  @return "#{$type}-#{$directionValue}";
+}
+
+@mixin generateSpaceClasses($prefix, $type, $theme) {
+  $spaceMap: map-get($theme, 'spaceMap');
+
+  @each $direction, $directionValue in $directionMap {
+    @each $space, $spaceValue in $spaceMap {
+      @if type-of($directionValue) == 'map' {
+        @each $singleDirection, $singleDirectionValue in $directionValue {
+          @include generateSpaceClass(
+            generateSpaceClassName($prefix, $space, $direction),
+            $type,
+            $spaceValue,
+            $singleDirectionValue
+          )
+        }
+      } @else {
+          @include generateSpaceClass(
+            generateSpaceClassName($prefix, $space, $direction),
+            $type,
+            $spaceValue,
+            $directionValue
+          )
+      }
+
+    }
+  }
+}

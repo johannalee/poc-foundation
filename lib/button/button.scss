@@ -12,11 +12,13 @@
 }
 
 button {
-  color: white;
-  text-decoration: none;
-  padding: 5px 10px;
-  border-radius: 3px;
-  font-size: 2em;
+  color:white;
+  text-decoration:none;
+  border-radius:3px;
+  font-family: 'Poiret One', cursive;
+  font-size:2em;
+  @include padding(lg, x, $defaultTheme);
+  @include padding(vl, y, $defaultTheme);
 }
 
 .green {
@@ -25,10 +27,6 @@ button {
 
 .blue {
   @include button-bg(#3498db);
-}
-
-.yellow {
-  @include button-bg(#f1c40f);
 }
 
 .red {

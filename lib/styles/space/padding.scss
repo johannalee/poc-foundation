@@ -1,0 +1,21 @@
+@import "./space.scss";
+@import "../variables/direction.scss";
+
+@mixin generatePaddingClasses($theme) {
+  @include generateSpaceClasses('p', 'padding', $theme)
+}
+
+@mixin padding($space, $direction, $theme) {
+  $spaceMap: map-get($theme, 'spaceMap');
+  $spaceValue: map-get($spaceMap, $space);
+
+  $directionValue: map-get($directionMap, $direction);
+
+  @if type-of($directionValue) == 'map' {
+    @each $singleDirection, $singleDirectionValue in $directionValue {
+      @include generateSpaceRule('padding', $spaceValue, $singleDirectionValue);
+    }
+  } @else {
+      @include generateSpaceRule('padding', $spaceValue, $directionValue);
+  }
+}

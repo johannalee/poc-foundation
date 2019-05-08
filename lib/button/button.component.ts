@@ -4,7 +4,7 @@ import { Component, Input } from '@angular/core';
   selector: 'poc-button',
   exportAs: 'pocButton',
   templateUrl: './button.html',
-  styleUrls: ['./button.scss']
+  styleUrls: ['../styles/globals.scss', './button.scss'],
 })
 export class ButtonComponent {
   @Input()
