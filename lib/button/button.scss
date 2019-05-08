@@ -3,23 +3,23 @@
 @mixin button-bg($bg) {
   background: $bg;
   &:hover {
-    background:darken($bg,8%);
+    background: darken($bg, 8%);
     transition: all 0.3s ease;
   }
   &:active {
-    background:darken($bg,25%);
+    background: darken($bg, 25%);
     outline: none;
     border: none;
   }
 }
 
 button {
-  color:white;
-  text-decoration:none;
-  padding:5px 10px;
-  border-radius:3px;
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 3px;
   font-family: 'Poiret One', cursive;
-  font-size:2em;
+  font-size: 2em;
 }
 
 .green {
@@ -30,7 +30,7 @@ button {
   @include button-bg(#3498db);
 }
 
-.yellow{
+.yellow {
   @include button-bg(#f1c40f);
 }
 
@@ -40,13 +40,12 @@ button {
 
 /*Other Stylez*/
 .wrap {
-  margin:0 auto;
-  width:800px;
-  text-align:center;
+  margin: 0 auto;
+  width: 800px;
+  text-align: center;
 }
 
 h1 {
   font-family: 'Poiret One', cursive;
-  font-size:4em;
+  font-size: 4em;
 }
-

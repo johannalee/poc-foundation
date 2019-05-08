@@ -1,10 +1,10 @@
-import {Component, Input} from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'poc-button',
   exportAs: 'pocButton',
   templateUrl: './button.html',
-  styleUrls: ['./button.scss'],
+  styleUrls: ['./button.scss']
 })
 export class ButtonComponent {
   @Input()
