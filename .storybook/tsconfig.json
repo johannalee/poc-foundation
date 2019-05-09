@@ -10,5 +10,8 @@
   ],
   "include": [
     "../lib/**/*"
+  ],
+  "files": [
+    "./typings.d.ts"
   ]
 }
