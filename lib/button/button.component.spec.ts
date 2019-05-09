@@ -4,7 +4,7 @@ import { ButtonComponent } from "./button.component";
 
 import * as puppeteer from "puppeteer";
 
-describe("LibComponent", () => {
+describe("ButtonComponent", () => {
   describe("DOM", () => {
     let component: ButtonComponent;
     let fixture: ComponentFixture<ButtonComponent>;
@@ -33,7 +33,7 @@ describe("LibComponent", () => {
       browser = await puppeteer.launch();
     });
 
-    it("default", async () => {
+    it("should take an image snapshot", async () => {
       const page = await browser.newPage();
       await page.goto("http://localhost:6006/?path=/story/button--with-text");
       await page.waitForSelector('#button--with-text');
