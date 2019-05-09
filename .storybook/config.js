@@ -1,9 +1,11 @@
-import { configure } from '@storybook/angular';
+import { configure, addDecorator } from '@storybook/angular';
+import { withNotes } from '@storybook/addon-notes';
 
-// automatically import all files ending in *.stories.ts
 const req = require.context('../lib/', true, /\.stories\.ts$/);
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
+
+addDecorator(withNotes);
 
 configure(loadStories, module);
