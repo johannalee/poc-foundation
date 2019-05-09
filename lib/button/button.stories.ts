@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
-import * as readme from './README.md';
+import markdown from './README.md';
 
 storiesOf('Button', module).add(
   'with text',
@@ -11,5 +11,5 @@ storiesOf('Button', module).add(
       classname: 'green'
     }
   }),
-  { notes: { markdown: readme } }
+  { notes: { markdown } }
 );
