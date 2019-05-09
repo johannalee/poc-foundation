@@ -12,7 +12,7 @@
     "storybook": "start-storybook -p 6006",
     "e2e": "testcafe chrome e2e",
     "test": "export NODE_ENV=test && ng test",
-    "test:gen-output": "ng test --json --outputFile=test-results.json --watch",
+    "test:gen-output": "export NODE_ENV=test && ng test --json --outputFile=test-results.json",
     "test:update-snapshot": "export NODE_ENV=test && ng test --updateSnapshot",
     "e2e:local:smoke": "testcafe chrome e2e/smoke",
     "e2e:local": "testcafe chrome e2e/tests",
