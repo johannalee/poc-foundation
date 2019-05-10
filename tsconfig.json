@@ -20,5 +20,8 @@
       "dom"
     ],
     "paths": { "@lib/*": ["lib/*"] }
-  }
+  },
+  "files": [
+    "./.storybook/typings.d.ts"
+  ]
 }
