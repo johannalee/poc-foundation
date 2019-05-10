@@ -1,11 +1,18 @@
 import { configure, addDecorator } from '@storybook/angular';
-import { withNotes } from '@storybook/addon-notes';
+import requireContext from 'require-context.macro';
 
-const req = require.context('../lib/', true, /\.stories\.ts$/);
+import { withTests } from '@storybook/addon-jest';
+
+import results from '../test-results.json';
+
+// automatically import all files ending in *.stories.ts
+const req = requireContext('../lib/', true, /\.stories\.ts$/);
+
 function loadStories() {
   req.keys().forEach(filename => req(filename));
 }
 
 addDecorator(withNotes);
+addDecorator(withTests({ results, filesExt: '((\\.component))((\\.specs?)|(\\.tests?))?(\\.js)?$' }));
 
 configure(loadStories, module);

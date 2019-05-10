@@ -1,6 +1,7 @@
 {
   "extends": "../lib/tsconfig.lib.json",
   "compilerOptions": {
+    "resolveJsonModule": true,
     "types": [
       "node"
     ]
