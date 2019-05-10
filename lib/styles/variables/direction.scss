@@ -3,9 +3,20 @@ $right: 'right';
 $top: 'top';
 $bottom: 'bottom';
 
-$left-right: ( l: $left, r: $right );
-$top-bottom: ( t: $top, b: $bottom );
-$all: ( t: $top, b: $bottom, l: $left, r: $right );
+$left-right: (
+  l: $left,
+  r: $right
+);
+$top-bottom: (
+  t: $top,
+  b: $bottom
+);
+$all: (
+  t: $top,
+  b: $bottom,
+  l: $left,
+  r: $right
+);
 
 $directionMap: (
   l: $left,

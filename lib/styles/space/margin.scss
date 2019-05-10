@@ -1,8 +1,8 @@
-@import "./space.scss";
-@import "../variables/direction.scss";
+@import './space.scss';
+@import '../variables/direction.scss';
 
 @mixin generateMarginClasses($theme) {
-  @include generateSpaceClasses('m', 'margin', $theme)
+  @include generateSpaceClasses('m', 'margin', $theme);
 }
 
 @mixin margin($space, $direction, $theme) {
@@ -16,6 +16,6 @@
       @include generateSpaceRule('margin', $spaceValue, $singleDirectionValue);
     }
   } @else {
-      @include generateSpaceRule('margin', $spaceValue, $directionValue);
+    @include generateSpaceRule('margin', $spaceValue, $directionValue);
   }
 }

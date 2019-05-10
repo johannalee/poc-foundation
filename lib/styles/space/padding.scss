@@ -1,8 +1,8 @@
-@import "./space.scss";
-@import "../variables/direction.scss";
+@import './space.scss';
+@import '../variables/direction.scss';
 
 @mixin generatePaddingClasses($theme) {
-  @include generateSpaceClasses('p', 'padding', $theme)
+  @include generateSpaceClasses('p', 'padding', $theme);
 }
 
 @mixin padding($space, $direction, $theme) {
@@ -16,6 +16,6 @@
       @include generateSpaceRule('padding', $spaceValue, $singleDirectionValue);
     }
   } @else {
-      @include generateSpaceRule('padding', $spaceValue, $directionValue);
+    @include generateSpaceRule('padding', $spaceValue, $directionValue);
   }
 }

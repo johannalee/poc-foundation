@@ -12,11 +12,11 @@
 }
 
 button {
-  color:white;
-  text-decoration:none;
-  border-radius:3px;
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
   font-family: 'Poiret One', cursive;
-  font-size:2em;
+  font-size: 2em;
   @include padding(lg, x, $defaultTheme);
   @include padding(vl, y, $defaultTheme);
 }
