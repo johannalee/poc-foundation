@@ -13,6 +13,6 @@ function loadStories() {
 }
 
 addDecorator(withNotes);
-addDecorator(withTests({ results, filesExt: '((\\.component))((\\.specs?)|(\\.tests?))?(\\.ts)?$' }));
+addDecorator(withTests({ results, filesExt: '((\\.component))((\\.specs?)|(\\.tests?))?(\\.js)?$' }));
 
 configure(loadStories, module);
