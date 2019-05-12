@@ -1,18 +1,16 @@
+import { select, text } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
-import { text, select } from '@storybook/addon-knobs';
 
 import markdown from './README.md';
 
-storiesOf('Button', module)
-  .addParameters({
-    jest: ['button']
-  })
-  .add(
-    'with text',
-    () => ({
-      component: ButtonComponent,
-      props: {
+const props =
+  process.env.NODE_ENV === 'test'
+    ? {
+        placeholder: 'Hello Button',
+        classname: 'red'
+      }
+    : {
         placeholder: text('placeholder', 'Hello Button'),
         classname: select(
           'classname',
@@ -23,8 +21,17 @@ storiesOf('Button', module)
           },
           'red'
         )
-      }
-    }),
+      };
 
+storiesOf('Button', module)
+  .addParameters({
+    jest: ['button']
+  })
+  .add(
+    'with text',
+    () => ({
+      component: ButtonComponent,
+      props
+    }),
     { notes: { markdown } }
   );

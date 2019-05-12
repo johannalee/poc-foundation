@@ -18,8 +18,7 @@ function loadStories() {
 
 addDecorator(withNotes);
 addDecorator(withTests({ results, filesExt: '((\\.component))((\\.specs?)|(\\.tests?))?(\\.js)?$' }));
-
-configure(loadStories, module);
-
 addDecorator(withKnobs)
 addDecorator(withA11y)
+
+configure(loadStories, module);
