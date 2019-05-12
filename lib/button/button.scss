@@ -1,3 +1,6 @@
+@import '../styles/defaultTheme.scss';
+@import '../styles/space/padding.scss';
+
 @mixin button-bg($bg) {
   background: $bg;
   &:hover {
@@ -15,7 +18,6 @@ button {
   color: white;
   text-decoration: none;
   border-radius: 3px;
-  font-family: 'Poiret One', cursive;
   font-size: 2em;
   @include padding(lg, x, $defaultTheme);
   @include padding(vl, y, $defaultTheme);
