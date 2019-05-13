@@ -1,0 +1,53 @@
+$base: 1rem;
+$base-text: 1rem;
+
+$spaceMap: (
+  vs: calc(0.25 * #{$base}),
+  sm: calc(0.5 * #{$base}),
+  md: #{$base},
+  lg: calc(1.25 * #{$base}),
+  vl: calc(1.5 * #{$base}),
+  vvl: calc(3 * #{$base})
+);
+
+$paletteMap: (
+  red: (
+    vlight: #ffaaaa,
+    light: #d46a6a,
+    base: #aa3939,
+    dark: #801515,
+    vdark: #550000
+  ),
+  green: (
+    vlight: #d4ee9f,
+    light: #a5c663,
+    base: #7b9f35,
+    dark: #567714,
+    vdark: #354f00
+  ),
+  blue: (
+    vlight: #669999,
+    light: #407f7f,
+    base: #226666,
+    dark: #0d4d4d,
+    vdark: #003333
+  ),
+  gray: (
+    vlight: #dcdcdc,
+    light: #d3d3d3,
+    base: #c0c0c0,
+    dark: #808080,
+    vdark: #696969
+  ),
+  black: (
+    base: #2d2926
+  ),
+  white: (
+    base: #ffffff
+  )
+);
+
+$defaultTheme: (
+  paletteMap: $paletteMap,
+  spaceMap: $spaceMap
+);

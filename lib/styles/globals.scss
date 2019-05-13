@@ -1,0 +1,12 @@
+@import './space/padding.scss';
+@import './space/margin.scss';
+
+@import './color/color.scss';
+
+@import './defaultTheme.scss';
+
+@include generatePaddingClasses($defaultTheme);
+@include generateMarginClasses($defaultTheme);
+
+@include generateBackgroundColorClasses($defaultTheme);
+@include generateFontColorClasses($defaultTheme);

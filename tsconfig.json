@@ -14,11 +14,14 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-    "types": ["jest"],
+    "types": ["node", "jest"],
     "lib": [
       "es2018",
       "dom"
     ],
     "paths": { "@lib/*": ["lib/*"] }
-  }
+  },
+  "files": [
+    "./.storybook/typings.d.ts"
+  ]
 }

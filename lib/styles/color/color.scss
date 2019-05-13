@@ -1,0 +1,37 @@
+@import '../utils.scss';
+
+@mixin generateColorRule($type, $color) {
+  #{$type}: #{$color};
+}
+
+@mixin generateColorClass($class, $cssClass, $paletteValue) {
+  #{$class} {
+    @include generateColorRule($cssClass, $paletteValue);
+  }
+}
+
+@function _generatePaletteClassName($prefix, $palette, $accent) {
+  @if ($accent == 'base') {
+    @return '.#{$prefix}-#{$palette}';
+  } @else {
+    @return '.#{$prefix}-#{$palette}-#{$accent}';
+  }
+}
+
+@mixin generateColorClasses($prefix, $type, $tokensConfig) {
+  $paletteMap: map-get($tokensConfig, 'paletteMap');
+
+  @each $palette, $paletteValue in $paletteMap {
+    @each $accent, $accentValue in $paletteValue {
+      @include generateColorClass(_generatePaletteClassName($prefix, $palette, $accent), $type, $accentValue);
+    }
+  }
+}
+
+@mixin generateBackgroundColorClasses($tokensConfig) {
+  @include generateColorClasses('bc', 'background-color', $tokensConfig);
+}
+
+@mixin generateFontColorClasses($tokensConfig) {
+  @include generateColorClasses('c', 'color', $tokensConfig);
+}

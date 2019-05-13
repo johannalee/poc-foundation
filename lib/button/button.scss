@@ -1,3 +1,6 @@
+@import '../styles/defaultTheme.scss';
+@import '../styles/space/padding.scss';
+
 @mixin button-bg($bg) {
   background: $bg;
   &:hover {
@@ -14,9 +17,10 @@
 button {
   color: white;
   text-decoration: none;
-  padding: 5px 10px;
   border-radius: 3px;
   font-size: 2em;
+  @include padding(lg, x, $defaultTheme);
+  @include padding(vl, y, $defaultTheme);
 }
 
 .green {
@@ -25,10 +29,6 @@ button {
 
 .blue {
   @include button-bg(#3498db);
-}
-
-.yellow {
-  @include button-bg(#f1c40f);
 }
 
 .red {

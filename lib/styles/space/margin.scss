@@ -1,0 +1,21 @@
+@import './space.scss';
+@import '../variables/direction.scss';
+
+@mixin generateMarginClasses($theme) {
+  @include generateSpaceClasses('m', 'margin', $theme);
+}
+
+@mixin margin($space, $direction, $theme) {
+  $spaceMap: map-get($theme, 'spaceMap');
+  $spaceValue: map-get($spaceMap, $space);
+
+  $directionValue: map-get($directionMap, $direction);
+
+  @if type-of($directionValue) == 'map' {
+    @each $singleDirection, $singleDirectionValue in $directionValue {
+      @include generateSpaceRule('margin', $spaceValue, $singleDirectionValue);
+    }
+  } @else {
+    @include generateSpaceRule('margin', $spaceValue, $directionValue);
+  }
+}
