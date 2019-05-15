@@ -13,4 +13,8 @@ export class ButtonComponent {
   public placeholder = 'click me';
   @Input()
   public disabled = false;
+
+  changeClassName() {
+    this.classname = 'green';
+  }
 }
