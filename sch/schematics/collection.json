@@ -1,0 +1,10 @@
+{
+  "$schema": "../../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "module": {
+      "description": "Create a module that contains its own public-api",
+      "factory": "./module",
+      "schema": "./module/schema.json"
+    }
+  }
+}

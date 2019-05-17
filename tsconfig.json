@@ -19,8 +19,11 @@
       "es2018",
       "dom"
     ],
-    "paths": { "@lib/*": ["lib/*"] }
+    "paths": {"@lib/*": ["lib/*"]}
   },
+  "exclude": [
+    "./sch"
+  ],
   "files": [
     "./.storybook/typings.d.ts"
   ]
