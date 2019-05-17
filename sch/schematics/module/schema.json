@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "Module",
+  "title": "POC Foundation Module Schema",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "string",
+      "default": "lib"
+    },
+    "sourceDir": {
+      "type": "string",
+      "default": "lib"
+    },
+    "prefix": {
+      "type": "string",
+      "default": "poc"
+    },
+    "path": {
+      "description": "The path to create the module",
+      "type": "string",
+      "format": "path",
+      "visible": false
+    },
+    "name": {
+      "description": "The name of the module",
+      "type": "string",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
+    }
+  },
+
+  "required": ["name"]
+}
